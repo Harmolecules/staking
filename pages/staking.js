@@ -433,7 +433,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     lineHeight: "17px",
     color: "#FFFFFF",
-    marginRight: "50px",
+    marginRight: "10px",
   },
   totalTitle2: {
     fontStyle: "normal",
@@ -535,7 +535,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: "15px",
       lineHeight: "16px",
-      width: "160px",
+      width: "120px",
     },
   },
   rollBtn: {
@@ -2855,9 +2855,9 @@ const Staking = () => {
         (el) => ethers.utils.formatUnits(el, 0)
       );
       const uninitialisedArray = [];
-      rarityArray.forEach((rarity, index) =>
-        // parseInt(rarity) === 0 &&
-        uninitialisedArray.push(filtered[index])
+      rarityArray.forEach(
+        (rarity, index) =>
+          parseInt(rarity) === 0 && uninitialisedArray.push(filtered[index])
       );
 
       if (uninitialisedArray.length) {
@@ -2869,7 +2869,6 @@ const Staking = () => {
         const dataArray = await Promise.all(dataPromises);
 
         const toInitialise = uninitialisedArray.map((id, i) => {
-          console.log(dataArray);
           return [id, dataArray[i].data.rarity, dataArray[i].data.signature];
         });
 
@@ -5176,31 +5175,41 @@ const Staking = () => {
                                 );
                               })}
                           </Box>
-                          <Box display="flex" justifyContent="space-between">
-                            <Box className={classes.totalBlock}>
-                              <Typography className={classes.totalTitle}>
-                                TOTAL REWARDS ${" "}
-                              </Typography>
-                              <Typography className={classes.gravAmount}>
-                                {totalRewardsRarity &&
-                                  parseFloat(totalRewardsRarity).toFixed(
-                                    4
-                                  )}{" "}
-                              </Typography>
-                            </Box>
-                            <Button
-                              onClick={raffleRollSelected}
-                              className={classes.rarityStakeBtn}
-                            >
-                              ROLL
-                            </Button>
-                            <Button
-                              onClick={rarityClaim}
-                              className={classes.rarityStakeBtn}
-                            >
-                              CLAIM
-                            </Button>
-                          </Box>
+                          <Grid container>
+                            <Grid item sm={12} md={6}>
+                              <Box className={classes.totalBlock} marginTop={1}>
+                                <Typography className={classes.totalTitle}>
+                                  TOTAL REWARDS (xGRAV){" "}
+                                </Typography>
+                                <Typography className={classes.gravAmount}>
+                                  {totalRewardsRarity &&
+                                    parseFloat(totalRewardsRarity).toFixed(
+                                      4
+                                    )}{" "}
+                                </Typography>
+                              </Box>
+                            </Grid>
+                            <Grid item sm={12} md={6}>
+                              <Box
+                                display="flex"
+                                marginTop={1}
+                                justifyContent="center"
+                              >
+                                <Button
+                                  onClick={raffleRollSelected}
+                                  className={classes.rarityStakeBtn}
+                                >
+                                  ROLL
+                                </Button>
+                                <Button
+                                  onClick={rarityClaim}
+                                  className={classes.rarityStakeBtn}
+                                >
+                                  CLAIM
+                                </Button>
+                              </Box>
+                            </Grid>
+                          </Grid>
                         </TabPanel>
                       </Box>
                     </Box>
