@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@ethersproject/abi": "^5.6.3",
     "@material-ui/core": "latest",
     "@material-ui/icons": "^4.9.1",
     "@mui/material": "^5.6.4",
