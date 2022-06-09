@@ -1897,7 +1897,7 @@ const Staking = () => {
   };
 
   const getHarmoleculesNFT = async () => {
-    console.log("H");
+    console.log("Getting Harmolecules");
     const defaultUri =
       "https://harmolecules.mypinata.cloud/ipfs/QmTQfazmn4sXcte6TjVmY7NkxNqj8meqjpXxtC2xuzg6cA/1.json";
 
