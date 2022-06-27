@@ -1749,7 +1749,7 @@ const Staking = () => {
     setLoading2(true);
 
     let provider = new ethers.providers.JsonRpcProvider(
-      "https://rpc.hermesdefi.io/"
+      "https://harmony-0-rpc.gateway.pokt.network/"
     );
 
     //Contract
@@ -4765,7 +4765,7 @@ const Staking = () => {
                                 </Box>
                               ))}
                           </Box>
-                          <Box display="flex" justifyContent="end">
+                          {/* <Box display="flex" justifyContent="end">
                             <Button
                               onClick={rarityStake}
                               className={classes.nftStakeBtn}
@@ -4781,7 +4781,7 @@ const Staking = () => {
                                 : ""}{" "}
                               NFT
                             </Button>
-                          </Box>
+                          </Box> */}
                         </TabPanel>
                         <TabPanel value={tabValRarity} index={1}>
                           <Box display="flex" justifyContent="end">
@@ -5170,7 +5170,7 @@ const Staking = () => {
                                 </Typography>
                               </Box>
                             </Grid>
-                            <Grid item sm={12} md={6}>
+                            {/* <Grid item sm={12} md={6}>
                               <Box
                                 display="flex"
                                 marginTop={1}
@@ -5189,7 +5189,7 @@ const Staking = () => {
                                   CLAIM
                                 </Button>
                               </Box>
-                            </Grid>
+                            </Grid> */}
                           </Grid>
                         </TabPanel>
                       </Box>
@@ -5326,7 +5326,7 @@ const Staking = () => {
                 </Box>
               )}
 
-              <Grid container className={classes.stakeAndLockBlock}>
+              {/* <Grid container className={classes.stakeAndLockBlock}>
                 <Grid item md={6} xs={12} className={classes.stakeAndLockLeft}>
                   <Typography
                     className={classes.stakeAndLockTitle}
@@ -5439,7 +5439,7 @@ const Staking = () => {
                     </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
+              </Grid> */}
 
               <Grid container className={classes.nftStakingContent}>
                 <Grid item md={8} xs={12}>
