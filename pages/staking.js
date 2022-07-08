@@ -3990,7 +3990,7 @@ const Staking = () => {
                                 <CircularProgress
                                   color="#E9D758"
                                   size={20}
-                                  style={{ marginRight: 10, marginTop: 20 }}
+                                  style={{ marginRight: 15, marginTop: 20 }}
                                 />
                                 Loading NFTs
                               </Box>
